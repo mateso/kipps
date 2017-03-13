@@ -26,15 +26,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+            //            'userid',
             [
                 'label' => 'Fullname',
                 'attribute' => 'userid',
                 'value' => function ($model) {
-                    return KipsUsers::getStudentName($model->userid);
+                    return app\models\KipsUsers::getStudentName($model->userid);
                 },
                 'filter' => Html::activeDropDownList(
                         $searchModel, 'userid', ArrayHelper::map(KipsUsers::findBySql("SELECT `userid`,CONCAT(`firstname`,' ',`middlename`,' ',`surname`) AS fullname FROM `user` WHERE `user_type` = 2 AND `status` = 1 ORDER BY `firstname`")->asArray()->all(), 'userid', 'fullname'), ['class' => 'form-control', 'prompt' => Yii::t('app', 'Please Filter')]
-//                        $searchModel, 'userid', ArrayHelper::map(KipsUsers::find()->all(), 'userid', 'studentFullname'), ['class' => 'form-control', 'prompt' => Yii::t('app', 'Please Filter')]
                 )
             ],
             [

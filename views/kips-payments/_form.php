@@ -31,7 +31,7 @@ use kartik\datecontrol\DateControl;
             'student_type' => [
                 'type' => Form::INPUT_DROPDOWN_LIST,
                 'label' => 'Student Type',
-                'items' => ['' => 'Please select', 2 => 'Day Student', 1 => 'Boarding Student'],
+                'items' => ['' => 'Please select', 1 => 'Boarding Student', 2 => 'Day Student'],
             ],
             'transport_route' => [
                 'label' => 'Transport Route',

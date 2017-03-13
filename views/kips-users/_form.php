@@ -62,15 +62,15 @@ use app\models\Gender;
             'tribe' => ['type' => Form::INPUT_TEXT, 'options' => ['placeholder' => 'Enter Tribe...']],
             'student_type' => [
                 'type' => Form::INPUT_DROPDOWN_LIST,
-                'label' => 'Student Type',
-                'items' => ['' => 'Please select', 1 => 'Boarding Student', 2 => 'Day Student'],
-            ],
-//            'transport_route' => [
-//                'label' => 'Transport Route',
-//                'type' => Form::INPUT_DROPDOWN_LIST,
-//                'items' => ArrayHelper::map(\app\models\KipsTransportRoutes::find()->orderBy('id')->asArray()->all(), 'id', 'area_covered'), 'options' => ['prompt' => 'Transport Route'],
-//                'columnOptions' => ['id' => 'transport_routes-id']
-//            ],
+               'label' => 'Student Type',
+               'items' => ['' => 'Please select', 1 => 'Boarding Student', 2 => 'Day Student'],
+           ],
+           'transport_route' => [
+               'label' => 'Transport Route',
+                'type' => Form::INPUT_DROPDOWN_LIST,
+               'items' => ArrayHelper::map(\app\models\KipsTransportRoutes::find()->orderBy('id')->asArray()->all(), 'id', 'area_covered'), 'options' => ['prompt' => 'Transport Route'],
+               'columnOptions' => ['id' => 'transport_routes-id']
+           ],
         ]
     ]);
     echo Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']);

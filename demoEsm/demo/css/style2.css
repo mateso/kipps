@@ -1,0 +1,301 @@
+
+/*------------------------- Layout styles ------------------------*/
+area {
+	margin:0;
+	background-color:white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a {
+	outline:none;
+}
+a img {
+	border:0;
+	display:block;
+}
+.page {
+	width:900px;
+	margin-left: 80px;
+}
+
+p {
+text-align: left;
+}
+
+p a:hover {
+	color:#ff8b00!important;
+}
+
+#signature h3,
+#note  h3 {
+font-size: 10px;
+}
+
+#rec_no h3,
+#date h3 {
+font-size: 25px;
+font-weight:bold;
+}
+
+#state h3 {
+font-size: 10px;
+}
+
+h5 {
+line-height: 1px;
+display: block;
+font-size: 1em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+font-weight: bold;
+}
+
+td +td +td{
+text-align: right;
+}
+
+tr {
+margin-bottom: 20px;
+}
+
+
+
+/*------------------------- area Content ------------------------*/
+.area .home .content {
+	float:left;
+	margin:0 0 0 0;
+	width:1000px;
+}
+ .area .receipt {
+	overflow:hidden;
+	margin-left: -50px;
+}
+
+.area .receipt .content {
+	background-color:#FFF;
+	border:1px solid #DFE1E4;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	padding:17px 0 0;
+	width:900px;
+}
+
+div #logo {
+float: left;
+width: 200px;
+height: 200px;
+display:block;
+position: absolute;
+} 
+
+div #heading, #contacts {
+float: right;
+width: 750px;
+text-align: center;
+display:block;
+height: 100px;
+line-height: 1;
+} 
+
+div #rec_no, #note {
+float: left;
+margin-left:20px;
+width: 200px;
+} 
+
+div #state {
+float: left;
+margin-left:100px;
+width: 300px;
+} 
+
+div #signature{
+float: right;
+width: 220px;
+margin-left:20px;
+} 
+
+div #date{
+float: right;
+width: 60px;
+margin-left:20px;
+}
+
+div #closure {
+float: right;
+margin-right:25px;
+width: 120px;
+height: 30px;
+font-size: 15px;
+} 
+
+div #sign{
+width: 180px;
+float: right;
+margin-left:20px;
+}
+
+div #note , #signature{
+font-size:7px;
+width: 200px;
+} 
+
+#signature {
+width: 220px;
+margin-right: -30px;}
+
+
+div #title {
+float: center;
+width:600px;
+margin-left:370px;
+text-decoration: underline;
+} 
+
+div #intro {
+font-size: 18px;
+display:overflow;
+width: 788px;
+} 
+
+div #contents {
+margin-left: 20px;
+line-height: 150%;
+width: 850px;
+text-align:left;
+font-size: 25px;
+}
+
+div #distribution {
+margin-left: 20px;
+font-size: 18px;
+} 
+
+.area .receipt ul {
+	background-color:#d0d4d7;
+	border:1px solid #dfe1e4;
+	border-radius:10px;
+	float:left;
+	list-style:none;
+	margin:0 19px 0 0;
+	padding:0;
+	width:148px;
+}
+ .area .receipt ul li {
+	border-top:1px solid #dfe1e4;
+}
+
+ .area .receipt .content div:first-child h2 {
+	color:black;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:30px;
+	font-weight:400;
+	letter-spacing:.025em;
+	line-height:48px;
+	margin:0 18px 0 19px;
+	width:auto;
+}
+.area .receipt .content div:first-child h2 a{
+	color:#EC7500;
+	display:inline;
+	float:none;
+	margin:0;
+	padding:0;
+}
+ .area .receipt .content div:first-child div p a {
+	color:#6B7073;
+	display:inline;
+	float:none;
+	margin:0;
+}
+ .area .receipt .content div:first-child a{
+	display:block;
+	float:left;
+	margin:26px 30px 0 0;
+}
+ .area .receipt .content div.section{
+	border-right:1px solid #DFE1E4;
+	float:left;
+	padding:15px 0 54px 19px;
+	width:500px;
+}
+ .area .receipt .content div.section div:first-child{
+	margin:0;
+}
+ .area .receipt .content div.section div{
+	border:0;
+	margin:24px 0 0;
+	padding:0 30px 0 0;
+	width:auto;
+}
+ .area .receipt .content div.section div h4 {
+	color:#6B7073;
+	font-size:14px;
+	font-weight:700;
+	letter-spacing:.05em;
+	line-height:24px;
+	margin:0;
+	text-align:justify;
+}
+ .area .receipt .content div.section div span {
+	color:#6B7073;
+	font-size:14px;
+	letter-spacing:.05em;
+	line-height:24px;
+	margin:0;
+	text-align:justify;
+}
+ .area .receipt .content div.section div p a {
+	margin:0;
+	float:none;
+	display:inline;
+	color:#6B7073;
+}
+.area .receipt .content div{
+	float: center;
+	width:900px;
+}
+ .area .receipt .content div h4 ,td {
+	font-size:20px;
+	font-weight:900;
+	letter-spacing:.05em;
+	line-height:25px;
+	margin:0;
+	text-align:justify;
+	padding: 5px;
+}
+ .area .receipt .content div ul{
+	background:none!important;
+	border:0;
+	margin:0;
+	width:auto;
+}
+.area .receipt .content div ul li {
+	border:0;
+	margin:24px 0 0;
+}
+.area .receipt .content div ul li span:first-child {
+	text-align:left;
+}
+ .area .receipt .content div ul li span{
+	color:#6B7073;
+	display:block;
+	font-size:14px;
+	letter-spacing:.05em;
+	line-height:24px;
+	margin:0;
+	text-align:right;
+}
+
+img {
+visibility: hidden;
+}
+
+#logo img {
+	visibility:visible;
+	position: static;
+	height: 150px;
+	width: 150px;
+	margin-left: 25px;
+}

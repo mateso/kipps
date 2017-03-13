@@ -1,0 +1,22 @@
+#slider.elegant { position:relative; overflow:hidden; width:1023px; height:360px; font-family: "Droid Sans", serif; }
+#slider.elegant ul { list-style:none; position:absolute; margin:0; height:360px; }
+#slider.elegant ul li { float:left; position:relative; width:1023px; height:360px; overflow:hidden; }
+#slider.elegant ul li .video-container iframe, #slider.elegant ul li .video-container object, #slider.elegant ul li .video-container embed { width:100% !important; height:338px !important; }
+
+/* captions style */
+#slider.elegant ul li .slider-caption { background:rgba(0,0,0,0.6); position:absolute; }
+#slider.elegant ul li .slider-caption h2, #slider.elegant ul li .slider-caption p { color:#fff; }
+#slider.elegant ul li .slider-caption h2 { margin:0 0 0.7em; font-family: "Yanone Kaffeesatz", serif; font-weight: normal; }
+#slider.elegant ul li .slider-caption p { font-size: 12px; }
+
+/* captions position */
+#slider.elegant ul li .caption-right, #slider.elegant ul li .caption-left { top:0; }
+#slider.elegant ul li .caption-top, #slider.elegant ul li .caption-bottom { left:0; }
+#slider.elegant ul li .caption-top      { top:-457px; }
+#slider.elegant ul li .caption-right    { right:-360px; }
+#slider.elegant ul li .caption-bottom   { bottom:-457px; }
+#slider.elegant ul li .caption-left     { left:-360px; }
+
+/* caption right */
+#slider.elegant ul li .caption-right, #slider.elegant ul li .caption-left { width:300px; height:100%; padding:40px 30px; }
+#slider.elegant ul li .caption-top, #slider.elegant ul li .caption-bottom { width:900px; height:auto; padding:20px 30px; }

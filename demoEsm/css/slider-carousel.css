@@ -1,0 +1,28 @@
+#slider.carousel { width:100%; overflow:hidden; position:relative; }
+#slider.carousel .wrapSlider { width:3072px; height:457px; position:relative; left:50%; margin-left:-1536px; overflow:hidden; }
+#slider.carousel .wrapSlider .opacity { width:1023px; height:457px; position:absolute; top:0; border:0px solid #fff; }
+#slider.carousel .wrapSlider .opacity span { display:block; width:100%; height:100%; background:#fff; opacity:0.75; filter: alpha(opacity=40); }
+#slider.carousel .wrapSlider .opacity.left { left:0; border-right-width:5px; }
+#slider.carousel .wrapSlider .opacity.right { right:0; border-left-width:5px; }
+#slider.carousel ul.scrolling { margin:0; }
+#slider.carousel ul.scrolling li { float:left; margin:0; padding:0; background:none; width:1023px; position: relative; list-style:none; border:0; }
+#slider.carousel .jcarousel-prev, #slider.carousel .jcarousel-next { position:absolute; top:10px; background:url('images/bg/arrows-slider.png') no-repeat; width:25px; height:25px; cursor:pointer; }
+#slider.carousel .jcarousel-prev { left:1973px; background-position:top left; }      
+#slider.carousel .jcarousel-next { left:1930px; top: 341px; background: url('../images/icons/next.png') no-repeat; width: 60px; height: 65px; }   
+
+#slider.carousel.carousel ul.scrolling li .caption {
+    position: absolute;
+    bottom: 57px;
+    right: 125px;
+    width: 320px;
+    height: 65px;
+    margin: 0;
+    padding: 0;
+    background: #fff; /* IE */
+    background: rgba(255, 255, 255, 0.75); 
+}
+
+#slider.carousel.carousel ul.scrolling li .caption h2 {font-family: "Yanone Kaffeesatz", serif; font-size: 24px; font-weight: normal; margin:0; padding:13px 0 0 10px; font-weight: 400; color: #111; }
+#slider.carousel.carousel ul.scrolling li .caption p {font-family: "Droid Sans", serif; font-size: 12px; margin: 0; padding:3px 0 0 10px; color: #57595c; } 
+#slider.carousel.carousel ul.scrolling li .caption a { color: #111; }
+#slider.carousel.carousel ul.scrolling li .caption a:hover { color: #57595c; }             

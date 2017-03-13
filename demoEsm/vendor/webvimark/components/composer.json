@@ -1,0 +1,13 @@
+{
+	"name": "webvimark/components",
+	"description": "Components for yii 2",
+	"require": {
+		"webvimark/image": "dev-master",
+		"webvimark/helpers": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"webvimark\\components\\": ""
+		}
+	}
+}

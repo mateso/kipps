@@ -1,0 +1,18 @@
+{
+	"name": "webvimark/module-user-management",
+	"description": "User with improved RBAC",
+	"autoload": {
+		"psr-4": {
+			"webvimark\\modules\\UserManagement\\": ""
+		}
+	},
+	"require": {
+		"webvimark/components": "dev-master",
+		"webvimark/bootstrap-switch": "dev-master",
+		"ikimea/browser": "dev-master",
+		"webvimark/date-range-picker": "dev-master",
+		"webvimark/helpers": "dev-master",
+		"webvimark/grid-bulk-actions": "dev-master",
+		"webvimark/grid-page-size": "dev-master"
+	}
+}

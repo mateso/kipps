@@ -1,0 +1,28 @@
+/* ====================== START CYCLE SLIDER ====================== */
+#slider.cycle { height:330px; padding:0 0 50px; position:relative; width: 960px; margin-top: 40px; }
+#slider.cycle .panel { display:none; position:absolute; left:0; top:0; width:100%; height:330px; background:transparent !important }
+#slider.cycle .panel:first-child, #slider.cycle .first { display:block; }
+#slider.cycle .panel .featured-image, #slider.cycle .panel .video-container { width:530px; text-align:center; float:right; }
+#slider.cycle .panel img, #slider.cycle .panel iframe, #slider.cycle .panel object { max-width:530px; max-height:300px; }
+#slider.cycle .panel .hentry { width:430px; float:left; margin-top:0px; }
+#slider.cycle .panel .hentry h2 { color: #000; margin-bottom:0;  font-family: "Yanone Kaffeesatz", serif; font-size: 24px; font-weight: normal; }
+#slider.cycle .panel .hentry h4 { margin:10px 0 20px; font-weight:normal; text-transform:none; line-height:0; }
+#slider.cycle .panel .hentry h4, #slider.cycle .panel .hentry p { color:#615c5c; }
+#slider.cycle .panel .hentry p { line-height:24px;  font-family: "Droid Sans", serif; font-size: 13px; }
+#slider.cycle a { color: #000 } 
+#slider.cycle a.moretext { font-family: "Droid Sans", serif; font-size: 13px; font-weight: bold; color: #000; }
+#slider.cycle .panel img, #slider.cycle .panel iframe, #slider.cycle .panel object { float: right; }
+
+/*pagination*/
+#slider.cycle .pagination { height:19px; position:absolute; right:20px; bottom:25px; }
+#slider.cycle .pagination a { display:block; width:19px; height:19px; background:url('../images/icons/pag-slider.png') no-repeat; margin-left:3px; float:left; text-indent:-9999px; outline:none; }
+#slider.cycle .pagination a.activeSlide { background-position:0 -19px; }
+ 
+/*controls*/
+#slider.cycle .controls { position:absolute; right:0; bottom:20px; }
+#slider.cycle .controls a { display:none; }
+
+
+#slider.cycle .panel .video-container { background: url('../images/bg-video.png') center; height: 265px; margin-top: 40px; }
+#slider.cycle .panel iframe, #slider.cycle .panel object { float: none; display: block; margin: 6px 0 0 45px; background: #000 }
+/* ====================== END CYCLE SLIDER ====================== */

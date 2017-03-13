@@ -1,0 +1,90 @@
+
+
+@page 
+{
+	size: A4;
+	margin: 0;
+    background:none;
+    border:none;
+}
+
+html, body 
+{
+    margin: 0;  /* the margin on the content before printing */
+    border: none;
+    background: none;
+	width: 210mm;
+    height: 148mm;
+} 
+
+   
+.container {background:none; width: 250mm;}
+hr {background:#ccc;color:#ccc;width:100%;height:2px;margin:1em 0;padding:0;border:none;}
+hr.space {background:#fff;color:#fff;visibility:hidden;}
+code {font:.9em "Courier New", Monaco, Courier, monospace;}
+a, a:link, a:visited, img, a:link:after, a:visited:after,ul, li,button, input, select {border:none; visibility: hidden;}
+p img.top {margin-top:0;}
+blockquote {margin:1.5em;padding:1em;font-style:italic;font-size:.9em;}
+.small {font-size:.9em;}
+.large {font-size:1.1em;}
+.quiet {color:#999;}
+.hide {display:none;}
+.inner_links,input,#header,#footer, #mainmenu,.breadcrumb{
+    display: none;
+
+}
+ul.breadcrumb{
+    display: none;
+    visibility: hidden;
+}
+ul li a{
+    display: none;
+
+}
+
+
+#page .span-5, #sidebar, .portlet{
+    display: none  !important;
+    width: 0;
+    visibility: hidden;
+}
+
+#logo .span-5 {
+	width: 300px;
+	overflow: visible;
+	visibility:visible;
+	position: relative;
+	}
+
+
+#logo img {
+	visibility:visible;
+	position: fixed;
+	height: 150px;
+	width: 250px;
+	margin-left: 25px;
+	background:none;	
+	overflow: visible; 
+}
+
+.footer {
+border-top: 0px;
+}
+
+.footer p {
+visibility: hidden;
+}
+
+
+
+/**************************************************************************/
+/*	 Divisions 														      */
+/**************************************************************************/
+
+
+div#side-nav-div{
+    display: none;
+    visibility: hidden;
+}
+
+

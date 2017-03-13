@@ -1,0 +1,9 @@
+{
+	"name": "webvimark/grid-bulk-actions",
+	"description": "Bulk actions extension for yii 2 gridview",
+	"autoload": {
+		"psr-4": {
+			"webvimark\\extensions\\GridBulkActions\\": ""
+		}
+	}
+}

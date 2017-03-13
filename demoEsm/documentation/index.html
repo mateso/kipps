@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Impero HTML Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Impero HTML&rdquo; Documentation by &ldquo;Your Inspiration Web&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Impero HTML&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 30/09/2011<br>
+					By: Your Inspiration Web<br>
+					Email: <a href="mailto:support@yourinspirationweb.com">support@yourinspirationweb.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">
+                    Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, 
+                    please feel free to email via my user page contact form <a href="http://themeforest.net/user/sara_p">here</a>. 
+                    Thanks so much!
+                </p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			
+			<li><a href="#change-logo">Change the logo</a></li>          
+			<li><a href="#change-font">Change the special font</a></li>     
+			<li><a href="#sliders">The sliders</a></li>       
+			<li><a href="#contact-script">Contact PHP script configuration</li> 
+			
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		
+		<h4><strong>Navigation</strong></h4>
+		<p>
+            The navigation is in located on header <i>(#header)</i> and have the ID "#nav". Here the structure:
+        </p>                                                          
+		
+		<img src="assets/images/nav-html.jpg" alt="HTML Navigation" />
+		
+		<br/><br/>
+		
+		<h4><strong>Content</strong></h4>
+		<p>
+            This theme is a fixed layout with two columns. All of the information within the main 
+            content area is nested within a div with an id of "content". The sidebar's (column #2) 
+            content is within a div with an id of "sidebar". The general template structure is the same 
+            throughout the template. Here is the general structure.
+        </p>
+		
+		<img src="assets/images/content-html.jpg" alt="HTML Content" />
+		
+		<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+
+<pre>	#content a {
+		color: #someColor;
+	} 
+</pre>
+
+		<p>
+            If you find that your new style is not overriding, it is most likely because 
+            of a specificity problem. Scroll down in your CSS file and make sure that there 
+            isn't a similar style that has more weight.
+        </p>
+
+		<p>I.E.</p>
+
+<pre>	 #content a {
+		color: #someColor !important;
+	}
+</pre>
+
+		<p>
+            So, to ensure that your new styles are applied, make sure that they carry enough "weight" 
+            and that there isn't a style lower in the CSS file that is being applied after yours.
+        </p> 
+        
+        <p>
+            Each page can be easily changed in its layout, replacing a class, that define the layout of the page:
+        </p>
+        
+        <ul>
+            <li><strong>Page with sidebar on right</strong>: "sidebar-right";
+            <li><strong>Page with sidebar on left</strong>: "sidebar-left";
+            <li><strong>Page without sidebar</strong>: "sidebar-no";
+        </ul>
+        
+        <p>
+            You need to define this class in the ".inner" div, inside the main content wrapper. Here an example:
+        </p>          
+
+<pre>	 &lt;div class="inner sidebar-right"&gt;
+		content and sidebar
+	&lt;/div&gt;
+</pre>
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+            We're using one main CSS file in this theme, located in the root of the theme and called "<strong>style.css</strong>". 
+            It contains the general reset and all style of the theme. The other two are 
+        </p> 
+
+		<p>
+            The stylesheet is organizzed and compact, to easily find the roles. Each section of this file
+            is delimited by some comments line. Here an example:
+        </p>  
+
+<pre>	/* === HEADER === */
+	some code
+	/* === END HEADER === */
+
+	/* === CONTENT === */
+	some code         
+	/* === END CONTENT === */
+	
+	/* === SIDEBAR === */
+	some code      
+	/* === END SIDEBAR === */
+	
+	/* === FOOTER === */
+	some code         
+	/* === END FOOTER === */
+	
+	etc, etc. 
+</pre>
+
+        <p>
+            Other CSS files are located in the "css" folder and they are for specif jQuery library.
+        </p>
+		
+		<p>
+            If you would like to edit a specific section of the site, simply find the 
+            appropriate label in the CSS file, and then scroll down until you find the 
+            appropriate style that needs to be edited.
+        </p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports three Javascript files.</p>
+		
+		<ol>
+			<li><b>jQuery</b>: is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li><b>Custom scripts</b>: Most of the animation in this site is carried out from the customs scripts.</li>
+			<li><b>jQuery Cycle</b>: used for the "Cycle Slider".</li>
+			<li><b>jQuery Easing</b>: used for particular effects of the Cycle Slider</li>
+			<li><b>jQuery jCarousel</b>: for the "slider Carousel" and for the portfolio with slider.</li>  
+			<li><b>jQuery Nivo Slider</b>: for the nivo slider, that you can put inside the content of a page.</li> 
+			<li><b>jQuery prettyPhoto</b>: used for the lightbox of the images.</li> 
+			<li><b>jQuery tipsy</b>: used for the effect on social icons.</li>      
+			<li><b>jQuery tweetable</b>: used to show the last tweets of a twitter account.</li>   
+			<li><b>jQuery Quicksend</b>: used for gallery and portfolio filterable, for the ordering effect.</li>     
+			<li><b>swfObject</b>: used for the render some videos.</li>
+			<li><b>cufon</b>: used for the special font.</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="change-logo"><strong>D) Change the logo</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To change the logo image url, you must edit header of each HTML file:</p>     
+		
+		<img src="assets/images/logo.jpg" alt="Logo" />
+		
+		<hr>   
+		
+		<h3 id="change-font"><strong>E) Change the special font</strong> - <a href="#toc">top</a></h3>
+		
+		<p>The special font is provided by Google Fonts</p>             
+		
+		<img src="assets/images/font.jpg" alt="Font" />
+		
+		<p>Then set the specific font, by google fonts, you need to edit <em>style.css</em> file:</p>   
+		
+		<img src="assets/images/font-css.jpg" alt="Font" />   
+		
+		<p>You can also set a font, choose one of the fonts saved in "Fonts" folder.</p>   
+		
+		<hr>       
+		
+		<h3 id="sliders"><strong>F) Sliders</strong> - <a href="#toc">top</a></h3>
+		
+		<p>There are four sliders available in this theme:</p>
+		
+		<ul>
+		    <li><b>Slider Cycle</b>: in the <em>slider-cycle.html</em> file;</li>
+		    <li><b>Slider Carousel</b>: in the <em>slider-carousel.html</em> file;</li>
+		    <li><b>Slider Nivo</b>: in the <em>slider-nivo.html</em> file;</li>  
+		    <li><b>Slider Elegant</b>: in the <em>slider-elegant.html</em> file.</li>
+		</ul>
+		
+		You can copy the code in one of these pages.
+		
+		<hr>        
+		
+		<h3 id="contact-script"><strong>G) Contact PHP script configuration</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme have a contact form already working, by the file called <b>sendmail.php</b>. The script
+        is written with PHP language and work both in client-side, that server-side.
+        The ajax request and real-time validation is on <em>js/contact.js</em> file.</p>
+        
+        <p>In the file sendmail.php, there is some configuration, for the sending of the contact form.<br/>
+        With this, you can configure to send emails from, and where to send the name that will appear in the email client:</p>
+        
+        <pre>// email
+define('TO_EMAIL', 'your@email.com'); 
+define('FROM_EMAIL', 'info@test.it');  
+define('FROM_NAME', 'Your Name'); 
+</pre>
+        
+        <p>Then, the contact form is already dynamic and works with infinity combination of inputs on contact form.
+        That is, you can add also more input fields, without change the script of sendmail.php file.<br/>
+        Also, you can configure the body of the email and add inside the information added by the user in the contact form.
+        You can configure the body with this constant, that you find on top of the file:</p>
+        
+        <pre>define( 'BODY', '%message%&lt;br /&gt;&lt;br /&gt;&lt;small&gt;email inviata da %name%, email %email%.&lt;/small&gt;' );</pre>
+        
+        <p>The string between the percentual symbol (%), is the name of the field. For example, if I add this field in the contact page:</p>
+        
+        <pre>&lt;input type="text" name="name" id="name-form" class="required" value="" /&gt;</pre>
+        
+        <p>by the string <em>%name%</em> (that is the same of <em>name="<b>name</b>"</em>) I can replace it with the name added by the user in the contact form.</p>
+        
+        <p>In addition, you can configure the <b>real time validation</b>, by adding some classes on the input fields. For example:</p>
+        
+        <pre>&lt;input type="text" name="email" id="email-form" <b>class="required email-validate"</b> value="" /&gt;</pre>
+        
+        <p>with the classes "<b>required</b>" and "<b>email-validate</b>", you can say respectively that this field is required and must be a valid email.</p>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>H) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>We've included the psd of the home.</p>
+		
+		<p>
+            If you'd like to change the main image in the header, open "home.psd", 
+            make the necessary adjustments, and then save the file with the right 
+            image name and replace the existing file. 
+            Do the same for other part of the theme.
+        </p> 
+		
+		<hr>
+		
+		<h3 id="credits"><strong>I) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p><strong>Fonts</strong></p>
+		
+		<ul>
+			<li>Quicksand font <a href="http://www.fontsquirrel.com/fonts/Quicksand">http://www.fontsquirrel.com/fonts/Quicksand</a></li>
+            <li>Bebas <a href="http://www.dafont.com/bebas.font">http://www.dafont.com/bebas.font</a></li>
+            <li>Waukegan <a href="http://www.fontspace.com/luke-owens/waukegan-ldo">http://www.fontspace.com/luke-owens/waukegan-ldo</a></li>
+            <li>Dustismo <a href="http://www.dafont.com/dustismo.font">http://www.dafont.com/dustismo.font</a></li>
+            <li>Folks <a href="http://www.dafont.com/folks.font">http://www.dafont.com/folks.font</a></li>
+            <li>Reklame Script <a href="http://www.dafont.com/reklame-script-demo.font">http://www.dafont.com/reklame-script-demo.font</a></li>
+            <li>Nilland <a href="http://www.dafont.com/nilland.font">http://www.dafont.com/nilland.font</a></li>
+            <li>Merge <a href="http://www.fontsquirrel.com/fonts/Merge">http://www.fontsquirrel.com/fonts/Merge</a></li>
+            <li>Delicious Font <a href="http://www.josbuivenga.demon.nl/delicious.html">http://www.josbuivenga.demon.nl/delicious.html</a></li>
+            <li>League Gothic <a href="http://www.fontsquirrel.com/fonts/League-Gothic">http://www.fontsquirrel.com/fonts/League-Gothic</a></li>
+            <li>Chunk Five <a href="http://www.fontsquirrel.com/fonts/ChunkFive">http://www.fontsquirrel.com/fonts/ChunkFive</a></li>
+		</ul>
+		
+		<p><strong>Icons</strong></p>
+		
+		<p>I’ve used “<b>Basic icon set</b>” pack, you can find it here:<br/>
+        <a href="http://pixel-mixer.com/basic_set/">http://pixel-mixer.com/basic_set/</a><br/>
+        and another icons with shadow effect:<br/>
+        <a href="http://www.dezinerfolio.com/freebie/30-free-vector-icons">http://www.dezinerfolio.com/freebie/30-free-vector-icons</a><br/>
+        Social network icons are taken here:<br/>
+        <a href="http://www.nouveller.com/general/free-social-media-bookmark-icon-pack-the-ever-growing-icon-set/">http://www.nouveller.com/general/free-social-media-bookmark-icon-pack-the-ever-growing-icon-set/</a><br/>
+        and some free stock</p>
+		
+		<hr>
+		
+		<p>
+            Once again, thank you so much for purchasing this theme. As I said at the beginning, 
+            We'd be glad to help you if you have any questions relating to this theme. 
+            No guarantees, but I'll do my best to assist. If you have a more general question 
+            relating to the themes on ThemeForest, you might consider visiting 
+            <a href="http://www.yourinspirationweb.com/tf/support/forum/">our forum</a>.
+        </p> 
+		
+		<p class="append-bottom alt large"><strong>Your Inspiration Web</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

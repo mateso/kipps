@@ -169,9 +169,7 @@ class KipsPaymentSetup extends \yii\db\ActiveRecord {
         if ($payment_type == 1 || $payment_type == 3) {
             $q = KipsPaymentSetup::findBySql("SELECT amount FROM `payment_setup` WHERE `education_level` = " . $class . " AND `fee_category` = '" . $student_type . "' AND `payment_type` = " . $payment_type);
             if($q == null)
-            {
             	return null;
-            }
             $amount_to_be_paid = $q->asArray()->one();
             return $amount_to_be_paid['amount'];
         } elseif ($payment_type == 2) {
@@ -184,13 +182,8 @@ class KipsPaymentSetup extends \yii\db\ActiveRecord {
     }
 
     public static function getStudentDeptAmountPaid($student_id, $payment_setup_id) {
-//        echo $student_id;
-//        echo '<br />';
-//        echo $payment_setup_id;
-//        die();
-    	if($payment_setup_id == null){
+    	if($payment_setup_id == null)
     	return null;
-        }
         $amount_paid = PaymentsAmount::findBySql("SELECT SUM(`payments_amount`.`amount`) AS `total_amount_paid`  FROM `payments_amount` INNER JOIN `payments` ON `payments_amount`.`payments_id` = `payments`.`id` WHERE `payments_amount`.`payment_setup_id` = " . $payment_setup_id . " AND `payments_amount`.`student_id` = " . $student_id . " AND `payments`.`status` = 1")->asArray()->one();
         return $amount_paid['total_amount_paid'];
     }

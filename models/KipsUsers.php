@@ -127,9 +127,10 @@ class KipsUsers extends \yii\db\ActiveRecord {
     return $student_name;
   }
 
-  public function getStudentFullname() {
-    $model = self::find()->select('userid', 'firstname', 'middlename', 'surname', 'user_type', 'status')->where(['user_type' => 2, 'status' => 1])->orderBy(['firstname' => SORT_ASC])->all();
-    return $model->firstname . ' ' . $model->middlename . ' ' . $model->surname;
+  public static function getStudents() {
+    $model = self::findAll();
+    $student_name = $model->firstname . ' ' . $model->middlename . ' ' . $model->surname;
+    return $student_name;
   }
 
   public function getStudentClass() {

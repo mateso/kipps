@@ -1,0 +1,9 @@
+{
+	"name": "webvimark/helpers",
+	"description": "Helpers for yii 2",
+	"autoload": {
+		"psr-4": {
+			"webvimark\\helpers\\": ""
+		}
+	}
+}

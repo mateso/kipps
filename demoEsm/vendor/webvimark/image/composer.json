@@ -1,0 +1,9 @@
+{
+	"name": "webvimark/image",
+	"description": "Kohana image lib wrapper for yii 2",
+	"autoload": {
+		"psr-4": {
+			"webvimark\\image\\": ""
+		}
+	}
+}

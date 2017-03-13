@@ -103,9 +103,6 @@ class KipsPaymentsController extends Controller {
             if ($model->save()) {
             
                 //tution_fee
-//                echo $student->class;
-//                echo $model->student_type;
-//                die();
                 $tution_fee_setup = \app\models\KipsPaymentSetup::findBySql("SELECT * FROM `payment_setup` WHERE `financial_year_id` = 6 AND `payment_type` = 1 AND `education_level` = " . $student->class . " AND `fee_category` = " . $model->student_type)->one();
                 if ($tution_fee_setup) {
                     $tution_fee_model = new \app\models\PaymentsAmount();

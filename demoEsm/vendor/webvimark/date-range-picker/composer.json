@@ -1,0 +1,9 @@
+{
+	"name": "webvimark/date-range-picker",
+	"description": "dangrossman daterangepicker yii 2 gridview",
+	"autoload": {
+		"psr-4": {
+			"webvimark\\extensions\\DateRangePicker\\": ""
+		}
+	}
+}
